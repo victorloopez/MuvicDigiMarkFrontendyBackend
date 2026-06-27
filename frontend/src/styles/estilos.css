@@ -1,0 +1,279 @@
+/* ==========================================================================
+   1. RESETEO GLOBAL Y ESTRUCTURA BASE (Pantalla Completa sin Márgenes)
+   ========================================================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Contenedor principal de las páginas */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ==========================================================================
+   2. REPARACIÓN TOTAL DEL NAVBAR (Menú Horizontal Limpio)
+   ========================================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d233a; /* Azul oscuro corporativo */
+  padding: 15px 40px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nombre de la marca a la izquierda */
+.navbar-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Contenedor de enlaces: Limpieza total de viñetas y alineación horizontal */
+.navbar-links {
+  display: flex;
+  list-style: none !important; /* Elimina los puntos negros definitivamente */
+  margin: 0;
+  padding: 0;
+  gap: 25px; /* Espacio entre pestañas */
+}
+
+.navbar-links li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+/* Estilo para los textos del menú (Evita el morado/azul de navegador) */
+.navbar-links a {
+  color: #d1dbe5;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+}
+
+/* Efecto Hover interactivo */
+.navbar-links a:hover {
+  color: #ff6b00; /* Naranja de realce corporativo */
+  border-bottom: 2px solid #ff6b00;
+}
+
+/* ==========================================================================
+   3. VISTA DE INICIO (Hero Banner y Tarjetas de Módulos)
+   ========================================================================== */
+.main-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: calc(100vh - 65px);
+}
+
+/* Encabezado Principal Expandido */
+.hero-section {
+  background: linear-gradient(135deg, #0d233a 0%, #1a3a5c 100%);
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  color: #ff6b00;
+  margin: 0 0 20px 0;
+  font-weight: 400;
+}
+
+.company-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1dbe5;
+  margin: 0;
+}
+
+/* Contenedor del Dashboard */
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #0d233a;
+  margin-bottom: 25px;
+  font-weight: 600;
+  border-left: 5px solid #ff6b00;
+  padding-left: 10px;
+}
+
+/* Cuadrícula Responsiva para las Cards */
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* Tarjetas de los Módulos (Grandes e Interactivas) */
+.module-card-large {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #eef2f5;
+}
+
+.module-card-large:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #ff6b00;
+}
+
+/* Íconos de los Módulos */
+.module-icon-large {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.module-card-large h4 {
+  font-size: 1.4rem;
+  color: #0d233a;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.module-card-large p {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   4. ESTILOS DE TABLAS Y FORMULARIOS (Módulos Internos)
+   ========================================================================== */
+.page-header {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eef2f5;
+  padding-bottom: 10px;
+}
+
+.page-header h1 {
+  color: #0d233a;
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Tablas de Datos */
+.modules-list {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+.modules-list th {
+  background-color: #0d233a;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 14px;
+  text-align: left;
+}
+
+.modules-list td {
+  padding: 14px;
+  border-bottom: 1px solid #eef2f5;
+  color: #444444;
+  vertical-align: middle;
+}
+
+.modules-list tr:last-child td {
+  border-bottom: none;
+}
+
+/* Botones de Acción Internos */
+.btn-action {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-action:hover {
+  opacity: 0.9;
+}
+/* FORCE FULL WIDTH RESET - Elimina los bordes del PC */
+html, body, #root, .app-viewport-full, .main-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Asegurar que el menú ocupe el extremo izquierdo al extremo derecho */
+.navbar {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 15px 40px !important;
+  box-sizing: border-box;
+}
+
+/* Asegurar que la sección azul del título ocupe todo el ancho */
+.hero-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 50px 40px !important;
+  box-sizing: border-box;
+}
+
+/* El contenedor de las tarjetas de abajo se centrará pero en un espacio gigante */
+.dashboard-container {
+  width: 100% !important;
+  max-width: 95% !important; /* Deja solo un mínimo respiro elegante para pantallas ultra anchas */
+  margin: 0 auto !important;
+  padding: 40px 0 !important;
+}s
